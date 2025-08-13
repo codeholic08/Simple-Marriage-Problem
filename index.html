@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stable Marriage Problem Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-controls">
+                <button id="theme-toggle" class="theme-toggle" title="Toggle Light/Dark Mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+            <h1>Stable Marriage Problem Demo</h1>
+            <p>Interactive Gale-Shapley Algorithm with Conflict Resolution</p>
+        </header>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="participant-count">Participants per side:</label>
+                <input type="number" id="participant-count" min="3" max="10" value="5">
+                <button id="regenerate-btn">Regenerate</button>
+            </div>
+            <div class="control-group">
+                <button id="solve-btn" class="primary">Run Gale-Shapley</button>
+                <button id="what-if-btn" class="secondary" disabled>What-If: Try Suggested Change</button>
+                <button id="reset-btn">Reset</button>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="preferences-section">
+                <div class="group-column">
+                    <h2>Group A (Proposers)</h2>
+                    <div id="group-a" class="group-container"></div>
+                </div>
+                
+                <div class="group-column">
+                    <h2>Group B (Receivers)</h2>
+                    <div id="group-b" class="group-container"></div>
+                </div>
+            </div>
+
+            <div class="results-section">
+                <div class="results-panel">
+                    <h2>Results</h2>
+                    <div id="empty-state" class="empty-state">
+                        <p>Run the Gale-Shapley algorithm to see results</p>
+                    </div>
+                    
+                    <div id="results-content" class="results-content" style="display: none;">
+                        <div class="matching-table">
+                            <h3>Stable Matching</h3>
+                            <table id="matching-table">
+                                <thead>
+                                    <tr>
+                                        <th>Group A</th>
+                                        <th>Group B</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+
+                        <div class="metrics">
+                            <h3>Metrics</h3>
+                            <div class="metric-grid">
+                                <div class="metric-item">
+                                    <span class="metric-label">Stability Score:</span>
+                                    <span id="stability-score" class="metric-value">-</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-label">Average Happiness:</span>
+                                    <span id="avg-happiness" class="metric-value">-</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-label">Proposer Satisfaction:</span>
+                                    <span id="proposer-satisfaction" class="metric-value">-</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-label">Receiver Satisfaction:</span>
+                                    <span id="receiver-satisfaction" class="metric-value">-</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blocking-pairs">
+                            <h3>Blocking Pairs</h3>
+                            <div id="blocking-pairs-list"></div>
+                        </div>
+
+                        <div class="bipartite-diagram">
+                            <h3>Matching Visualization</h3>
+                            <div id="diagram-container" class="diagram-container"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="assistant-panel">
+                    <h2>Conflict Resolution Assistant</h2>
+                    <div id="assistant-content" class="assistant-content">
+                        <div class="explanation">
+                            <h3>Analysis</h3>
+                            <div id="explanation-text">Run the algorithm to see analysis...</div>
+                        </div>
+                        
+                        <div class="suggestions">
+                            <h3>Suggestions</h3>
+                            <div id="suggestions-list"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast notification -->
+    <div id="toast" class="toast"></div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
