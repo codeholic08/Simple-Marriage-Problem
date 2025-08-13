@@ -2,9 +2,10 @@
 
 An interactive web application demonstrating the **Gale-Shapley algorithm** for solving the Stable Marriage Problem, featuring a modern UI inspired by [Mollie's](https://www.mollie.com/) design and an intelligent conflict resolution assistant.
 
-![Stable Marriage Problem Demo](https://img.shields.io/badge/Demo-Live-green)
+![Live Demo](https://img.shields.io/badge/Demo-Live%20on%20GitHub%20Pages-green)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 ![No Build Required](https://img.shields.io/badge/build-none-brightgreen)
+![Deployment](https://github.com/codeholic08/Simple-Marriage-Problem/actions/workflows/deploy.yml/badge.svg)
 
 ## 🎯 Features
 
@@ -34,8 +35,11 @@ An interactive web application demonstrating the **Gale-Shapley algorithm** for 
 
 ## 🚀 Quick Start
 
-### **No Build Required!** 
-Simply download the files and open `index.html` in your browser.
+### **🌐 Option 1: Live Demo (Recommended)**
+**[👉 Try it now on GitHub Pages](https://codeholic08.github.io/Simple-Marriage-Problem/)**
+
+### **💻 Option 2: Run Locally**
+No build required! Simply download and open.
 
 ```bash
 # Clone the repository
@@ -51,7 +55,7 @@ python -m http.server 8000
 # Visit http://localhost:8000
 ```
 
-### **Alternative: Direct File Access**
+### **📁 Option 3: Direct File Access**
 You can also simply open `index.html` directly in any modern browser, though a local server is recommended for optimal ES module loading.
 
 ## 📁 Project Structure
@@ -168,4 +172,6 @@ This project is open source and available under the [MIT License](LICENSE).
 **Made with ❤️ for education and exploration of algorithmic problem solving.**
 
 ### 🌐 Live Demo
-Experience the demo live by downloading and running the files locally. No installation required!
+**🔗 [Try the Live Demo](https://codeholic08.github.io/Simple-Marriage-Problem/)**
+
+The demo is automatically deployed to GitHub Pages. You can also run it locally by downloading the files - no installation required!
